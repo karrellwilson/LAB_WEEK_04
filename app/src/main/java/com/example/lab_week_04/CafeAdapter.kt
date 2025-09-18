@@ -1,25 +1,24 @@
-package com.example.lab_week_04
+package com.example.lab_week_04 // Pastikan package name sesuai
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.lab_week_04.R
 
-private val TABS_FIXED = listOf(
-    R.string.starbucks_title,
-    R.string.janji_jiwa_title,
-    R.string.kopikenangan_title
-)
+class CafeAdapter(
+    // Tambahkan parameter ini untuk menerima daftar deskripsi
+    private val tabContents: List<String>,
+    fragmentManager: FragmentManager,
+    lifecycle: Lifecycle
+) : FragmentStateAdapter(fragmentManager, lifecycle) {
 
-class CafeAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
-    FragmentStateAdapter(fragmentManager, lifecycle) {
-
+    // Jumlah halaman/tab sekarang didasarkan pada jumlah deskripsi
     override fun getItemCount(): Int {
-        return TABS_FIXED.size
+        return tabContents.size
     }
 
+    // Buat fragment dengan deskripsi yang sesuai
     override fun createFragment(position: Int): Fragment {
-        return CafeDetailFragment()
+        return CafeDetailFragment.newInstance(tabContents[position])
     }
 }

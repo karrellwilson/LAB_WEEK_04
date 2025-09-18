@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.LAB_WEEK_04" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.MyCoffeeApp" parent="Theme.Material3.DayNight.NoActionBar">
     </style>
 
     <style name="Theme.NavigationDrawer.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
@@ -8,7 +8,9 @@
     </style>
 
     <style name="Theme.NavigationDrawer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="Theme.NavigationDrawer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="Theme.LAB_WEEK_04" parent="Base.Theme.LAB_WEEK_04" />
+    <style name="Theme.MyCoffeeApp" parent="Base.Theme.MyCoffeeApp" />
+
 </resources>

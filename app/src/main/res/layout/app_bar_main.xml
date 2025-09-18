@@ -18,6 +18,16 @@
             android:background="@color/light_brown"
             app:popupTheme="@style/Theme.NavigationDrawer.PopupOverlay" />
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_brown"
+            android:visibility="gone"
+            app:tabIndicatorColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/gray" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
